@@ -1,11 +1,5 @@
 {
   "name": "belov.codes main",
   "version": 2,
-  "alias": ["belov.codes"],
-  "rewrites": [
-    {
-      "source": "/lab/space-rockets-challenge",
-      "destination": "https://rockets.belov.codes"
-    }
-  ]
+  "alias": ["belov.codes"]
 }
