@@ -4,8 +4,8 @@
   "alias": ["belov.codes"],
   "rewrites": [
     {
-      "source": "/lab/space-rockets-challenge/(.*)",
-      "destination": "https://rockets.belov.codes/$1"
+      "source": "/lab/space-rockets-challenge",
+      "destination": "https://rockets.belov.codes"
     }
   ]
 }
