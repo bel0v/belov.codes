@@ -2,10 +2,10 @@
   "name": "belov.codes main",
   "version": 2,
   "alias": ["belov.codes"],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/lab/space-rockets-challenge",
-      "dest": "https://rockets.belov.codes"
+      "source": "/lab/space-rockets-challenge/(.*)",
+      "destination": "https://rockets.belov.codes/$1"
     }
   ]
 }
