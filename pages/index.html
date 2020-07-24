@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coming soon</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+      canvas {
+        display: block;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: #3b003b;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="theCanvas">
+      Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <footer>
+      <a href="mailto:yegor@belov.codes">yegor@belov.codes</a>
+    </footer>
+    <script src="drawNoise.js" type="module"></script>
+  </body>
+</html>

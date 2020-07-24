@@ -1,0 +1,11 @@
+{
+  "name": "belov.codes main",
+  "version": 2,
+  "alias": ["belov.codes"],
+  "routes": [
+    {
+      "src": "/lab/space-rockets-challenge",
+      "dest": "https://rockets.belov.codes"
+    }
+  ]
+}
