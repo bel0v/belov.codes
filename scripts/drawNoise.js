@@ -5,9 +5,6 @@ import perlin from "./perlinOriginal.js";
 let animationFrame;
 
 function main() {
-  if (!process.browser) {
-    return;
-  }
   const WIDTH = window.innerWidth;
   const HEIGHT = window.innerHeight;
 
@@ -105,6 +102,4 @@ function redraw() {
 
 main();
 
-if (process.browser) {
-  window.addEventListener("resize", redraw);
-}
+window.addEventListener("resize", redraw);
