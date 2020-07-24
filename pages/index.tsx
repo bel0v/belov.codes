@@ -1,5 +1,5 @@
 import Head from "next/head";
-import "./drawNoise";
+import "../scripts/drawNoise";
 
 function IndexPage() {
   return (
