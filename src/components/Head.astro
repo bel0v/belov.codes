@@ -1,0 +1,38 @@
+---
+import '@fontsource-variable/work-sans'
+import '@fontsource-variable/source-code-pro'
+import '@fontsource-variable/crimson-pro'
+import '@fontsource-variable/sono'
+import 'styles/global.css'
+import workSansWoff2 from '@fontsource-variable/work-sans/files/work-sans-latin-wght-normal.woff2'
+import sonoWoff2 from '@fontsource-variable/sono/files/sono-latin-wght-normal.woff2'
+
+interface Props {
+  title: string
+  description?: string
+}
+const { title, description } = Astro.props
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- todo: OG Head component -->
+  {description && <meta name="description" content={description} />}
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link
+    rel="preload"
+    as="font"
+    type="font/woff2"
+    href={workSansWoff2}
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    as="font"
+    type="font/woff2"
+    href={sonoWoff2}
+    crossorigin="anonymous"
+  />
+  <title>Yegor Belov | {title}</title>
+</head>

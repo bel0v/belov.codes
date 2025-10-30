@@ -1,0 +1,50 @@
+@import 'reset.css';
+
+body {
+  font-family: 'Crimson Pro Variable', serif;
+  font-size: 18px;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+code {
+  font-family: 'Source Code Pro Variable', Consolas, monospace;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Work Sans Variable', sans-serif;
+  font-weight: 600;
+}
+h1 {
+  font-size: 250%;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 200%;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 150%;
+  line-height: 1.38;
+}
+
+p {
+  font-size: 125%;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+ul {
+  font-size: 125%;
+}
+
+a {
+  font-family: 'Sono Variable', monospace;
+  font-variation-settings: 'wght' var(--wght, 400);
+  text-decoration: none;
+}

@@ -1,0 +1,68 @@
+---
+
+---
+
+<script>
+  const links = document.getElementsByTagName('a')
+
+  function throttle(func: Function, timeFrame: number) {
+    let lastTime = 0
+    return function throttled(...args: unknown[]) {
+      let now = Date.now()
+      if (now - lastTime >= timeFrame) {
+        func(...args)
+        lastTime = now
+      }
+    }
+  }
+
+  function getPointerProximity(
+    pointerCoords: { x: number; y: number },
+    elementRect: DOMRect
+  ) {
+    const elementCenter = {
+      x: elementRect.x + elementRect.width / 2,
+      y: elementRect.y + elementRect.height / 2,
+    }
+    return Math.hypot(
+      pointerCoords.x - elementCenter.x,
+      pointerCoords.y - elementCenter.y
+    )
+  }
+
+  function rangeMap(
+    value: number,
+    sourceRange: [number, number],
+    targetRange: [number, number]
+  ) {
+    const sourceLength = sourceRange[1] - sourceRange[0]
+    const targetLength = targetRange[1] - targetRange[0]
+    const percentage = (value - sourceRange[0]) / sourceLength
+
+    return percentage * targetLength + targetRange[0]
+  }
+
+  if (links) {
+    const tracedLinks = [...links].map(
+      (link) => [link, link.getBoundingClientRect()] as const
+    )
+    const updateLinksWeight = (pointer: { x: number; y: number }) => {
+      tracedLinks.forEach(([link, linkRect]) => {
+        const proximity = getPointerProximity(pointer, linkRect)
+        const weight =
+          proximity <= 100 ? Math.floor(rangeMap(proximity, [0, 100], [800, 400])) : 400
+
+        link.style.setProperty('--wght', `${weight}`)
+      })
+    }
+
+    document.addEventListener('mousemove', throttle(updateLinksWeight, 60))
+    document.addEventListener('mouseenter', updateLinksWeight)
+  }
+</script>
+
+<style>
+  a {
+    font-variation-settings: 'wght' var(--wght);
+  }
+</style>

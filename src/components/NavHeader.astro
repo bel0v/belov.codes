@@ -1,0 +1,26 @@
+---
+const { pathname } = Astro.url
+---
+
+<header>
+  <nav id="main-nav">
+    <a href="/" aria-current={pathname === '/'}>/home</a>
+    <a href="/blog" aria-current={pathname.startsWith('/blog')}>/blog</a>
+  </nav>
+</header>
+
+<style>
+  header {
+    padding: 1rem;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 150%;
+    line-height: 200%;
+  }
+  a[aria-current='true'] {
+    font-variation-settings: 'wght' 800;
+  }
+</style>

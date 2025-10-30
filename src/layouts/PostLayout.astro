@@ -1,0 +1,35 @@
+---
+import type { MarkdownLayoutProps } from 'astro'
+import Head from 'components/Head.astro'
+import NavHeader from 'components/NavHeader.astro'
+import Footer from 'components/Footer.astro'
+import type { PostFrontmatter } from 'config/types'
+import MainLayout from './MainLayout.astro'
+
+type Props = MarkdownLayoutProps<PostFrontmatter>
+
+const {
+  title,
+  description,
+  publishDate,
+  locale = 'en-GB',
+  minutesRead,
+} = Astro.props.frontmatter
+
+const publishDateFormatted = new Date(publishDate).toLocaleDateString(locale, {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+})
+console.log(locale)
+
+const viewCount = 2
+---
+
+<MainLayout title={title} description={description}>
+  <h1>{title}</h1>
+  <p>{publishDateFormatted}</p>
+  <p>Viewed by {viewCount} folks</p>
+  <p>{minutesRead}</p>
+  <slot />
+</MainLayout>
