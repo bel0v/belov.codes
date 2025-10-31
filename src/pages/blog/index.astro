@@ -1,7 +1,7 @@
 ---
 import MainLayout from 'layouts/MainLayout.astro'
 import type { MarkdownInstance } from 'astro'
-import type { PostFrontmatter } from '../../config/types'
+import type { PostFrontmatter } from '../../types'
 
 const allPosts: MarkdownInstance<PostFrontmatter>[] = Object.values(
   import.meta.glob('./*.md', { eager: true })

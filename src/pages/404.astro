@@ -1,0 +1,40 @@
+---
+import { Bird } from '@lucide/astro'
+import MainLayout from 'layouts/MainLayout.astro'
+---
+
+<MainLayout title="Home">
+  <div class="center">
+    <Bird color="#ff3e98" size={200} id="illustration" />
+    <h1>404</h1>
+  </div>
+</MainLayout>
+
+<script>
+  import { throttle } from 'scripts/throttle'
+  const icon = document.getElementById('illustration')
+
+  const updateIcon = (pointer: { x: number; y: number }) => {
+    if (pointer.x <= window.innerWidth / 2) {
+      icon?.classList.add('flip')
+    } else {
+      icon?.classList.remove('flip')
+    }
+  }
+
+  document.addEventListener('mousemove', throttle(updateIcon, 100))
+</script>
+
+<style>
+  .center {
+    height: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+  }
+  #illustration {
+    &.flip {
+      transform: rotateY(180deg);
+    }
+  }
+</style>

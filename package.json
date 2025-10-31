@@ -13,6 +13,7 @@
     "@fontsource-variable/sono": "5.2.8",
     "@fontsource-variable/source-code-pro": "5.2.7",
     "@fontsource-variable/work-sans": "5.2.8",
+    "@lucide/astro": "0.552.0",
     "astro": "5.14.7",
     "mdast-util-to-string": "4.0.0",
     "reading-time": "1.5.0"

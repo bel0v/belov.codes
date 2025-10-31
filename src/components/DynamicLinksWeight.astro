@@ -3,18 +3,9 @@
 ---
 
 <script>
-  const links = document.getElementsByTagName('a')
+  import { throttle } from 'scripts/throttle'
 
-  function throttle(func: Function, timeFrame: number) {
-    let lastTime = 0
-    return function throttled(...args: unknown[]) {
-      let now = Date.now()
-      if (now - lastTime >= timeFrame) {
-        func(...args)
-        lastTime = now
-      }
-    }
-  }
+  const links = document.getElementsByTagName('a')
 
   function getPointerProximity(
     pointerCoords: { x: number; y: number },
@@ -57,7 +48,6 @@
     }
 
     document.addEventListener('mousemove', throttle(updateLinksWeight, 60))
-    document.addEventListener('mouseenter', updateLinksWeight)
   }
 </script>
 
