@@ -17,9 +17,11 @@ const { title, description } = Astro.props
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- todo: OG Head component -->
+  <title>Yegor Belov | {title}</title>
+  <slot name="head" />
   {description && <meta name="description" content={description} />}
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script src="scripts/theme-toggle"></script>
   <link
     rel="preload"
     as="font"
@@ -34,5 +36,4 @@ const { title, description } = Astro.props
     href={sonoWoff2}
     crossorigin="anonymous"
   />
-  <title>Yegor Belov | {title}</title>
 </head>

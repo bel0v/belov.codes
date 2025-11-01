@@ -11,8 +11,9 @@ const { title, description } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <Head title={title} description={description} />
+  <slot name="head" slot="head" />
   <body>
     <NavHeader />
     <main>

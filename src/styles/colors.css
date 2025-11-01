@@ -1,0 +1,11 @@
+html {
+  color-scheme: light;
+
+  &[data-theme='dark'] {
+    color-scheme: dark;
+
+    @supports not (color-scheme: dark) {
+      background: #111;
+    }
+  }
+}

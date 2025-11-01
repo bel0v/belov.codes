@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from './ThemeToggle.astro'
+
 const { pathname } = Astro.url
 ---
 
@@ -7,11 +9,20 @@ const { pathname } = Astro.url
     <a href="/" aria-current={pathname === '/'}>/home</a>
     <a href="/blog" aria-current={pathname.startsWith('/blog')}>/blog</a>
   </nav>
+  <div class="side">
+    <ThemeToggle />
+  </div>
 </header>
 
 <style>
   header {
     padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .side {
+    margin-inline-start: auto;
   }
   nav {
     display: flex;
@@ -19,8 +30,9 @@ const { pathname } = Astro.url
     gap: 1rem;
     font-size: 150%;
     line-height: 200%;
-  }
-  a[aria-current='true'] {
-    font-variation-settings: 'wght' 800;
+
+    a[aria-current='true'] {
+      font-variation-settings: 'wght' 800;
+    }
   }
 </style>

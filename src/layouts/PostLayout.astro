@@ -24,6 +24,8 @@ const viewCount = 2
 ---
 
 <MainLayout title={title} description={description}>
+  <meta slot="head" name="og:title" content={title} />
+
   <h1>{title}</h1>
   <p>{publishDateFormatted}</p>
   <p>Viewed by {viewCount} folks</p>

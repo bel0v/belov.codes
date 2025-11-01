@@ -1,4 +1,5 @@
 @import 'reset.css';
+@import 'colors.css';
 
 body {
   font-family: 'Crimson Pro Variable', serif;
@@ -47,4 +48,9 @@ a {
   font-family: 'Sono Variable', monospace;
   font-variation-settings: 'wght' var(--wght, 400);
   text-decoration: none;
+}
+
+a,
+button {
+  outline-offset: 4px;
 }

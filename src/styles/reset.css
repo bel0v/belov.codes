@@ -8,7 +8,6 @@
   }
 
   html {
-    color-scheme: light dark;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
@@ -43,4 +42,14 @@
       padding-inline-start: 1lh;
     }
   }
+}
+
+button {
+  appearance: none;
+  border: none;
+  color: inherit;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
 }
