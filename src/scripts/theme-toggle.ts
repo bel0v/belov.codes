@@ -17,7 +17,6 @@ const renderPreferredTheme = () => {
 const theme = {
   value: getColorPreference(),
 }
-console.log(theme)
 
 const onClick = () => {
   theme.value = theme.value === 'light' ? 'dark' : 'light'

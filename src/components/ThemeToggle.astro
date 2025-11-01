@@ -29,15 +29,18 @@
 
   button?.addEventListener('click', () => {
     button.classList.toggle('flip')
+    document.firstElementChild?.classList.add('with-transition')
   })
 </script>
 
 <style is:global>
   .theme-toggle {
     --size: 32px;
-    --toggle-duration: 300ms;
-    --color: hsl(210 10% 30%);
-    --color-hover: hsl(210 10% 15%);
+    --toggle-duration: 500ms;
+    --color: var(--color-text-secondary);
+    --color-hover: var(--color-text);
+    /* --color: hsl(210 10% 30%);
+    --color-hover: hsl(210 10% 15%); */
 
     aspect-ratio: 1;
     border-radius: 50%;
@@ -69,11 +72,11 @@
         }
       }
     }
-
+    /*
     [data-theme='dark'] & {
       --color: hsl(210 10% 90%);
       --color-hover: hsl(210 15% 100%);
-    }
+    } */
 
     &.flip {
       & svg {

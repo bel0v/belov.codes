@@ -1,6 +1,16 @@
 @import 'reset.css';
 @import 'colors.css';
 
+html {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  &.with-transition {
+    transition:
+      color 0.5s ease,
+      background-color 0.5s ease;
+  }
+}
+
 body {
   font-family: 'Crimson Pro Variable', serif;
   font-size: 18px;
@@ -48,6 +58,7 @@ a {
   font-family: 'Sono Variable', monospace;
   font-variation-settings: 'wght' var(--wght, 400);
   text-decoration: none;
+  color: var(--color-emphasis);
 }
 
 a,
