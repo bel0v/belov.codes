@@ -3,13 +3,15 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"],
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
       "config/*": ["./src/config/*"],
       "components/*": ["./src/components/*"],
       "layouts/*": ["./src/layouts/*"],
       "assets/*": ["./src/assets/*"],
       "styles/*": ["./src/styles/*"],
-      "scripts/*": ["./src/scripts/*"]
+      "scripts/*": ["./src/scripts/*"],
+      "constants/*": ["./src/constants/*"]
     },
     "strict": true,
     "target": "ESNext",
@@ -31,7 +33,6 @@
     "noErrorTruncation": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    "jsxImportSource": "react",
-    "baseUrl": "."
+    "jsxImportSource": "react"
   }
 }

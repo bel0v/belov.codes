@@ -10,6 +10,9 @@ const config: AstroUserConfig = {
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
+  redirects: {
+    '/': '/blog',
+  },
 }
 
 export default config

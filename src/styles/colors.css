@@ -2,14 +2,14 @@ html {
   color-scheme: light;
 
   /* Main color definitions */
-  --c-primary-light: hsl(210, 90%, 55%);
+  --c-primary-light: hsl(210, 90%, 50%);
   --c-primary-dark: hsl(210, 90%, 65%);
   --c-secondary-light: hsl(346, 84%, 61%);
   --c-secondary-dark: hsl(164, 95%, 43%);
   --c-background-light: hsl(0, 0%, 98%);
   --c-background-dark: hsl(210, 30%, 10%);
-  --c-surface-light: hsl(from var(--c-background-light) h s calc(l + 2));
-  --c-surface-dark: hsl(from var(--c-background-dark) h s calc(l + 5));
+  --c-surface-light: hsl(from var(--c-secondary-light) h s 95%);
+  --c-surface-dark: hsl(from var(--c-background-dark) h s calc(l + 10));
   --c-text-primary-light: hsl(210, 20%, 15%);
   --c-text-primary-dark: hsl(0, 0%, 95%);
   --c-text-secondary-light: hsl(from var(--c-text-primary-light) h s calc(l + 20));

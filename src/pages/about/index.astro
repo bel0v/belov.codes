@@ -1,0 +1,70 @@
+---
+import photo from './me.jpg'
+import { Image } from 'astro:assets'
+
+import MainLayout from 'layouts/MainLayout.astro'
+import { SOCIALS_CHESS, SOCIALS_BLUESKY, PUBLIC_PGP_FILE } from 'constants/links'
+import { getDanielsAge } from 'scripts/daniels-age'
+import ContentWrapper from '../../components/ContentWrapper.astro'
+
+const age = getDanielsAge()
+---
+
+<MainLayout title="About">
+  <ContentWrapper variant="article">
+    <div class="content">
+      <h2>Hi!</h2>
+      <div class="photo-wrapper">
+        <Image src={photo} alt="A photo of Yegor Belov" width={200} height={200} />
+      </div>
+      <p>
+        I’m Yegor Belov. I build software for a living and have helped raise a couple of
+        <a href="/cv#revolut">unicorns</a> — with <a href="https://getapron.com">
+          another one</a
+        > on the horizon. I specialise in Frontend and Fintech domain, with a deep focus on
+        product and UX. Recently, my interests have shifted towards the "kitchen": DX, CI/CD,
+        tooling, etc.
+      </p>
+      <p>
+        These days, I live in London with my wife and son. He’s {age} old now!
+      </p>
+      <p>
+        I play the drums in a band. <a href={SOCIALS_BLUESKY} target="_blank"
+          >I’ll let you know</a
+        > when we drop something! I've also picked up chess lately while babysitting.
+        <a href={SOCIALS_CHESS} target="_blank"> Let’s play a game</a> sometime!
+      </p>
+      <p>
+        PGP: <code>32F7 2A8C 2B12 2986 180D C76A 3ADF 3D1B 7248 B4FB</code>
+        <br />
+        — or as an <a href={PUBLIC_PGP_FILE}>.asc file</a>
+      </p>
+    </div>
+  </ContentWrapper>
+</MainLayout>
+
+<style>
+  .content {
+    margin-block-start: 5rem;
+  }
+  code {
+    background: var(--color-surface);
+    border-radius: 4px;
+    padding: 4px 8px;
+  }
+  h2 {
+    float: left;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+  }
+  .photo-wrapper {
+    display: none;
+    float: right;
+    margin-left: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+</style>

@@ -9,10 +9,14 @@ html {
       color 0.5s ease,
       background-color 0.5s ease;
   }
+  --font-main: 'Space Grotesk Variable';
+  --font-code: 'Source Code Pro Variable';
+  --font-header: 'Work Sans Variable';
 }
 
 body {
-  font-family: 'Crimson Pro Variable', serif;
+  font-family: var(--font-main), serif;
+  font-variation-settings: 'wght' 400;
   font-size: 18px;
   font-optical-sizing: auto;
   font-style: normal;
@@ -20,15 +24,15 @@ body {
   flex-direction: column;
 }
 code {
-  font-family: 'Source Code Pro Variable', Consolas, monospace;
+  font-family: var(--font-code), Consolas, monospace;
   font-style: normal;
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Work Sans Variable', sans-serif;
-  font-weight: 600;
+  font-family: var(--font-header), sans-serif;
+  font-variation-settings: 'wght' 700;
 }
 h1 {
   font-size: 250%;
@@ -45,9 +49,9 @@ h3 {
 }
 
 p {
-  font-size: 125%;
+  font-size: 110%;
   line-height: 1.5;
-  margin-bottom: 1.5em;
+  margin-bottom: 1rem;
 }
 
 ul {
@@ -55,13 +59,31 @@ ul {
 }
 
 a {
-  font-family: 'Sono Variable', monospace;
-  font-variation-settings: 'wght' var(--wght, 400);
-  text-decoration: none;
-  color: var(--color-emphasis);
+  color: var(--color-accent);
+  font-variation-settings: 'wght' 500;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2.5px;
+  transition: 0.15s;
+  &:hover {
+    text-decoration-color: inherit;
+  }
 }
 
 a,
 button {
-  outline-offset: 4px;
+  &:focus-visible {
+    outline-offset: 4px;
+    outline-color: var(--color-emphasis);
+    border-radius: 4px;
+  }
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }

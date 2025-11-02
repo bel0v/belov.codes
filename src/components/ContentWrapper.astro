@@ -1,0 +1,25 @@
+---
+interface Props {
+  variant?: 'main' | 'article'
+}
+
+const { variant = 'main' } = Astro.props
+---
+
+<section class={variant}>
+  <slot />
+</section>
+
+<style>
+  section {
+    max-width: 100%;
+    padding-inline: 1rem;
+    margin-inline: auto;
+    &.main {
+      width: 1440px;
+    }
+    &.article {
+      width: 800px;
+    }
+  }
+</style>
