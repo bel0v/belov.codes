@@ -8,6 +8,7 @@ import { getDanielsAge } from 'scripts/daniels-age'
 import ContentWrapper from '../../components/ContentWrapper.astro'
 
 const age = getDanielsAge()
+export const prerender = false
 ---
 
 <MainLayout title="About">
@@ -32,7 +33,8 @@ const age = getDanielsAge()
         I play the drums in a band. <a href={SOCIALS_BLUESKY} target="_blank"
           >I’ll let you know</a
         > when we drop something! I've also picked up chess lately while babysitting.
-        <a href={SOCIALS_CHESS} target="_blank"> Let’s play a game</a> sometime!
+        <a href={SOCIALS_CHESS} target="_blank"> Let’s play a game</a> sometime! Check out
+        the other links below to stay in touch.
       </p>
       <p>
         PGP: <code>32F7 2A8C 2B12 2986 180D C76A 3ADF 3D1B 7248 B4FB</code>

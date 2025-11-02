@@ -24,6 +24,5 @@ function formatAge(years: number, months: number, weeks: number) {
 
 export function getDanielsAge() {
   const { years, months, weeks } = calculateDanielAgeParts()
-  console.log(formatAge(years, months, weeks))
   return formatAge(years, months, weeks)
 }

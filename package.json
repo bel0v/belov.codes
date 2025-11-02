@@ -4,12 +4,16 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "pnpm test && astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "serve": "node ./dist/server/entry.mjs",
+    "test": "vitest run --config ./config/vitest.config.ts"
   },
   "dependencies": {
-    "@fontsource-variable/crimson-pro": "5.2.8",
+    "@astrojs/mdx": "4.3.9",
+    "@astrojs/node": "9.5.0",
+    "@astrojs/sitemap": "3.6.0",
     "@fontsource-variable/sono": "5.2.8",
     "@fontsource-variable/source-code-pro": "5.2.7",
     "@fontsource-variable/space-grotesk": "5.2.10",
@@ -18,8 +22,7 @@
     "astro": "5.14.7",
     "dayjs": "1.11.19",
     "mdast-util-to-string": "4.0.0",
-    "reading-time": "1.5.0",
-    "ts-pattern": "5.9.0"
+    "reading-time": "1.5.0"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.5",
@@ -28,6 +31,7 @@
     "prettier": "3.6.2",
     "prettier-plugin-astro": "0.14.1",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.46.2"
+    "typescript-eslint": "8.46.2",
+    "vitest": "3.2.4"
   }
 }
