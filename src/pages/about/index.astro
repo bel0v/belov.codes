@@ -1,5 +1,5 @@
 ---
-import photo from './me.jpg'
+import photo from 'assets/me.jpg'
 import { Image } from 'astro:assets'
 
 import MainLayout from 'layouts/MainLayout.astro'
@@ -23,7 +23,7 @@ export const prerender = false
         <a href="/cv#revolut">unicorns</a> — with <a href="https://getapron.com">
           another one</a
         > on the horizon. I specialise in Frontend and Fintech domain, with a deep focus on
-        product and UX. Recently, my interests have shifted towards the "kitchen": DX, CI/CD,
+        product and UX. Recently, my interests have shifted towards the “kitchen”: DX, CI/CD,
         tooling, etc.
       </p>
       <p>
@@ -51,8 +51,10 @@ export const prerender = false
   }
   code {
     background: var(--color-surface);
+    box-decoration-break: clone;
     border-radius: 4px;
     padding: 4px 8px;
+    user-select: all;
   }
   h2 {
     float: left;
