@@ -4,6 +4,7 @@ import LogoGithub from '../assets/logo-github.svg'
 import LogoBluesky from '../assets/logo-bluesky.svg'
 import LogoLinkedin from '../assets/logo-linkedin.svg'
 import { SOCIALS_BLUESKY, SOCIALS_GITHUB, SOCIALS_LINKEDIN } from 'constants/links'
+import { FileUser } from '@lucide/astro'
 ---
 
 <footer>
@@ -12,21 +13,14 @@ import { SOCIALS_BLUESKY, SOCIALS_GITHUB, SOCIALS_LINKEDIN } from 'constants/lin
       <a href={SOCIALS_GITHUB} target="_blank" title="github profile">
         <LogoGithub />
       </a>
-      <a
-        href={SOCIALS_BLUESKY}
-        target="_blank"
-        title="bluesky profile"
-        class="socials-bs"
-      >
+      <a href={SOCIALS_BLUESKY} target="_blank" title="bluesky profile">
         <LogoBluesky />
       </a>
-      <a
-        href={SOCIALS_LINKEDIN}
-        target="_blank"
-        title="linked.in profile"
-        class="socials-li"
-      >
+      <a href={SOCIALS_LINKEDIN} target="_blank" title="linked.in profile">
         <LogoLinkedin />
+      </a>
+      <a href="/cv" target="_blank" title="CV" class="icon">
+        <FileUser size={18} stroke-width={2} />
       </a>
     </div>
   </ContentWrapper>
@@ -48,9 +42,17 @@ import { SOCIALS_BLUESKY, SOCIALS_GITHUB, SOCIALS_LINKEDIN } from 'constants/lin
       place-items: center;
       width: 32px;
       height: 32px;
+      border-radius: 50%;
       color: var(--color-text-secondary);
       &:hover {
         color: var(--color-text);
+      }
+      &.icon {
+        color: var(--color-background);
+        background-color: var(--color-text-secondary);
+        &:hover {
+          background-color: var(--color-text);
+        }
       }
     }
   }

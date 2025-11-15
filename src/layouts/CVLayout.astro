@@ -1,0 +1,36 @@
+---
+import Head from 'components/Head.astro'
+import ContentWrapper from '../components/ContentWrapper.astro'
+
+interface Props {
+  title: string
+  description?: string
+}
+const { title, description } = Astro.props
+---
+
+<!doctype html>
+<html lang="en" dir="ltr">
+  <Head title={title} description={description} />
+  <slot name="head" slot="head" />
+  <body>
+    <main>
+      <ContentWrapper variant="article">
+        <slot />
+      </ContentWrapper>
+    </main>
+  </body>
+</html>
+
+<style>
+  html {
+    height: 100%;
+  }
+
+  body,
+  main {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+  }
+</style>

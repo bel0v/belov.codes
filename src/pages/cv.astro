@@ -1,0 +1,286 @@
+---
+import dayjs from 'dayjs'
+import {
+  SOCIALS_LINKEDIN,
+  SOCIALS_GITHUB,
+  SOCIALS_LINKEDIN_PRINT,
+  SOCIALS_GITHUB_PRINT,
+} from 'constants/links'
+import CVLayout from 'layouts/CVLayout.astro'
+import { Printer } from '@lucide/astro'
+export const prerender = false
+const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
+---
+
+<CVLayout title="Yegor Belov’s CV">
+  <section class="top-section">
+    <div>
+      <div class="hstack">
+        <button class="screen" onclick="window.print()">
+          <Printer />
+        </button>
+        <h2>Yegor Belov</h2>
+      </div>
+
+      <h3>Software engineer · London, UK</h3>
+
+      <p>
+        Experience: {workExperienceYears}+ years (pro), {workExperienceYears + 4}+ years
+        (hobbyist)
+      </p>
+    </div>
+
+    <div class="main-links">
+      <div>
+        <a href="mailto:yegor@belov.codes">yegor@belov.codes</a>
+      </div>
+
+      <div>
+        <span class="screen">
+          <a href={SOCIALS_LINKEDIN} target="_blank"> LinkedIn </a>
+        </span>
+        <span class="print">
+          {SOCIALS_LINKEDIN_PRINT}
+        </span>
+      </div>
+      <div>
+        <span class="screen">
+          <a href={SOCIALS_GITHUB} target="_blank"> GitHub </a>
+        </span>
+        <span class="print">
+          {SOCIALS_GITHUB_PRINT}
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <p style="margin-top:1rem;">
+    Front-end specialist with 10+ years of experience, 8 of them in Fintech. Has proven
+    expertise at industry leaders and innovators such as Revolut, Pleo, and Apron.
+    Recognized for technical leadership, delivering scalable UI solutions, and driving
+    product success in fast-paced environments.
+  </p>
+
+  <h3>Technical Skills</h3>
+
+  <p>
+    I specialise in Frontend and Fintech domain, with a deep focus on product and UX.
+    Having worked in multiple start-ups from early stages, I know how to deploy a scalable
+    and maintainable platform from ground-up and what mistakes to avoid.
+  </p>
+  <p>
+    <b>TypeScript</b> and <b>JavaScript</b> are my primary languages. Sometimes I use others,
+    like <b>Processing</b> (Java-like) for generative art experiments, <b>Solidity</b> for
+    exploring crypto, or <b>Python</b> for fun home automation projects.
+  </p>
+
+  <p>
+    Approximate stack I use for SPAs these days:
+    <br />
+    React + Redux / Context API, react-query / SWR, css-in-js, Vitest + RTL, Playwright, Vite,
+    Eslint + Prettier. I’d go for Nginx for a web server. I’m comfortable with GitHub Actions
+    and Docker for CI/CD automation.
+  </p>
+
+  <h3>Soft skills</h3>
+
+  <p>
+    Organised regular frontend knowledge-sharing sessions within the company. Interviewed
+    and onboarded numerous team members to the growing frontend departments. Public
+    speaking: internal demos and talks, external meetup talks. Mentored a few people of
+    different levels, almost all of them got promoted. Led a team of 7 engineers.
+  </p>
+
+  <h3 id="xp">Latest work experience</h3>
+  <p>
+    You can find the full list on my <a href={SOCIALS_LINKEDIN} target="_blank"
+      >LinkedIn page.</a
+    >
+  </p>
+
+  <ul class="lined">
+    <li>
+      <div>
+        <h4>
+          Founding Frontend engineer – <a href="https://getapron.com" target="_blank">
+            Apron Payments
+          </a>
+        </h4>
+        <p><span class="subheader">B2B Payments SaaS. 2022 - now</span></p>
+        <p>
+          Started from the ground up with the other 6 people in the company. Set up and
+          continue maintaining everything related to our UI — repositories, CI/CD,
+          infrastructure, linting, etc. Over 3.5 years, I’ve built or contributed to
+          almost every product and feature we have, so listing them all would take a
+          while. Apron raised $30m last year.
+        </p>
+        <p>
+          Challenges: Scalable component and system design to lay a solid foundation for
+          the product.
+          <br />
+          Tech stack: TS, React, react-query, stitches, playwright, vite
+        </p>
+      </div>
+    </li>
+
+    <li>
+      <h4>Engineering Lead – <a href="https://pleo.io" target="_blank">Pleo</a></h4>
+
+      <p>
+        <span class="subheader"> B2B Payments SaaS. 2020 - 2022 </span>
+      </p>
+      <p>
+        Pleo’s main goal was growth, with sales-lead onboarding as the main limiting
+        factor. I was leading the Productised onboarding team (9 people). The project was
+        quite successful; Pleo grew fast and became a unicorn valued at $4.7B. Challenges:
+        first experience as a team lead. Product-wise — a logic-heavy branched onboarding
+        flow, depending on many factors like different market regulations and company
+        types.
+        <br />
+        Tech stack: TS, React, Emotion, SWR
+      </p>
+      <li>
+        <h4>
+          Senior Frontend developer – <a href="https://revolut.com" target="_blank"
+            >Revolut</a
+          >
+        </h4>
+        <p>
+          <span class="subheader"> A Challenger bank. 2017 - 2020 </span>
+        </p>
+        <p>
+          2017: All the things, from basic tech stack decisions to conducting interviews
+          for the growing team. Developed revolut.com website, worked on Revolut Business
+          launch, built customer support chat widget.
+        </p>
+        <p>
+          2018-2020: Developed a few features of Revolut Business. Launched Expense
+          Management, Business Perks, Business Connect (a marketplace of integrations with
+          other apps through Revolut API), and implemented support for the Open Banking
+          standard. Implemented user-facing features + backoffice support UI.
+        </p>
+        <p>mid.2020-sept.2020: Worked on a Chrome extension for retail users.</p>
+        <p>
+          Challenges: Explosive team and project growth. Frontend developers grew from 5
+          to 72 in 3 years, requiring process, communication, and architecture
+          adjustments. Also had to learn browser extensions to build one.
+        </p>
+        <p>Tech stack: TS, React, Redux, Ramda, styled-components, webpack</p>
+      </li>
+    </li>
+  </ul>
+
+  <h3>Education</h3>
+
+  <ul class="lined">
+    <li>
+      <p><b>2010-2015:</b> Russian State University For The Humanities</p>
+      <p>Intellectual systems – Master's degree</p>
+    </li>
+    <li>
+      <p><b>2015-2018:</b> Russian State University For The Humanities</p>
+      <p>Computer science fundamentals – Postgraduate</p>
+    </li>
+  </ul>
+</CVLayout>
+
+<style>
+  .screen {
+    @media print {
+      display: none;
+    }
+  }
+  .print {
+    @media screen {
+      display: none;
+    }
+  }
+  .top-section {
+    padding-top: 3rem;
+    @media print {
+      padding-top: 0;
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .main-links {
+        align-items: end;
+        text-align: right;
+        & > * {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+
+  h3 {
+    margin-block-start: 2rem;
+  }
+  .subheader {
+    color: var(--color-text-secondary);
+  }
+
+  .main-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    a {
+      color: var(--color-text);
+      text-decoration: underline;
+    }
+  }
+
+  .hstack {
+    display: flex;
+    gap: 24px;
+    margin-left: -48px;
+    align-items: center;
+    @media print {
+      margin-left: 0;
+    }
+  }
+  ul {
+    list-style: none;
+  }
+  ul.lined {
+    li {
+      h3,
+      p {
+        margin: 0;
+      }
+      position: relative;
+      margin: 0;
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+      &:before {
+        background-color: var(--color-emphasis);
+        width: 2px;
+        content: '';
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0.5rem;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: var(--color-emphasis);
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: calc(0.5rem - 5px);
+        top: 0.75rem;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+      &:first-child:before {
+        top: 0.75rem;
+      }
+      &:last-child:before {
+        height: 1rem;
+      }
+    }
+  }
+</style>

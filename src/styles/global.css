@@ -16,12 +16,16 @@ html {
 
 body {
   font-family: var(--font-main), serif;
-  font-variation-settings: 'wght' 400;
+  font-weight: 400;
   font-size: 18px;
   font-optical-sizing: auto;
   font-style: normal;
   display: flex;
   flex-direction: column;
+  @media print {
+    font-size: 14px;
+    padding-inline: 2rem;
+  }
 }
 code {
   font-family: var(--font-code), Consolas, monospace;
@@ -30,9 +34,10 @@ code {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--font-header), sans-serif;
-  font-variation-settings: 'wght' 700;
+  font-weight: 700;
 }
 h1 {
   font-size: 250%;
@@ -42,10 +47,13 @@ h2 {
   font-size: 200%;
   line-height: 1.25;
 }
-
 h3 {
   font-size: 150%;
   line-height: 1.38;
+}
+h4 {
+  font-size: 120%;
+  line-height: 1.5;
 }
 
 p {
@@ -54,13 +62,9 @@ p {
   margin-bottom: 1rem;
 }
 
-ul {
-  font-size: 125%;
-}
-
 a {
   color: var(--color-accent);
-  font-variation-settings: 'wght' 500;
+  font-weight: 500;
   white-space: nowrap;
   text-decoration: underline;
   text-decoration-color: transparent;

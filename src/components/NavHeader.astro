@@ -43,13 +43,13 @@ const { pathname } = Astro.url
     font-size: 150%;
 
     a {
-      font-variation-settings: 'wght' var(--wght, 400);
+      font-weight: var(--wght, 400);
       color: var(--color-emphasis);
       font-family: 'Sono Variable', monospace;
       text-decoration: none;
 
       &[aria-current='true'] {
-        font-variation-settings: 'wght' 800;
+        font-weight: 800;
       }
     }
   }
