@@ -226,9 +226,18 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    @media screen {
+      a {
+        color: var(--color-text);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media print {
     a {
       color: var(--color-text);
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 

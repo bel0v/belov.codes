@@ -4,7 +4,7 @@ import MainLayout from 'layouts/MainLayout.astro'
 ---
 
 <MainLayout title="Home">
-  <div class="center">
+  <div class="wrapper">
     <Bird color="#ff3e98" size={200} id="illustration" />
     <h1>404</h1>
   </div>
@@ -26,10 +26,8 @@ import MainLayout from 'layouts/MainLayout.astro'
 </script>
 
 <style>
-  .center {
-    height: 100%;
-    display: grid;
-    place-content: center;
+  .wrapper {
+    margin-block-start: 5rem;
     text-align: center;
   }
   #illustration {
