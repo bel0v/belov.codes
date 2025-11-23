@@ -13,21 +13,24 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
 ---
 
 <CVLayout title="Yegor Belov’s CV">
+  <meta
+    slot="head"
+    name="description"
+    content={`Yegor Belov is a front-end developer with {workExperienceYears}+ years of experience, including {
+      workExperienceYears - 2
+    } in fintech. He builds robust, scalable products for fast-paced, high-growth companies.
+    At Revolut, Pleo, and Apron, He shipped products that scale and last.`}
+  />
   <section class="top-section">
     <div>
       <div class="hstack">
-        <button class="screen" onclick="window.print()">
+        <button class="screen" onclick="window.print()" title="Print this page">
           <Printer />
         </button>
         <h2>Yegor Belov</h2>
       </div>
 
       <h3>Software engineer · London, UK</h3>
-
-      <p>
-        Experience: {workExperienceYears}+ years (pro), {workExperienceYears + 4}+ years
-        (hobbyist)
-      </p>
     </div>
 
     <div class="main-links">
@@ -55,40 +58,40 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
   </section>
 
   <p style="margin-top:1rem;">
-    Front-end specialist with 10+ years of experience, 8 of them in Fintech. Has proven
-    expertise at industry leaders and innovators such as Revolut, Pleo, and Apron.
-    Recognized for technical leadership, delivering scalable UI solutions, and driving
-    product success in fast-paced environments.
+    I’m a front-end developer with {workExperienceYears}+ years of experience, including {
+      workExperienceYears - 2
+    } in fintech. I build robust, scalable products for fast-paced, high-growth companies.
+    At Revolut, Pleo, and Apron, I shipped products that scale and last. I care about clean
+    code, great UX, and making complex things simple.
   </p>
 
   <h3>Technical Skills</h3>
 
   <p>
-    I specialise in Frontend and Fintech domain, with a deep focus on product and UX.
-    Having worked in multiple start-ups from early stages, I know how to deploy a scalable
-    and maintainable platform from ground-up and what mistakes to avoid.
+    I specialise in the Frontend and Fintech domains, with a deep focus on product and UX.
+    Start-up experience taught me how to build a scalable, maintainable platform from the
+    ground up and what mistakes to avoid.
   </p>
   <p>
-    <b>TypeScript</b> and <b>JavaScript</b> are my primary languages. Sometimes I use others,
-    like <b>Processing</b> (Java-like) for generative art experiments, <b>Solidity</b> for
-    exploring crypto, or <b>Python</b> for fun home automation projects.
+    <b>TypeScript</b> and <b>JavaScript</b> are my primary languages. Sometimes I write simple
+    code in Kotlin, Go, Python, Solidity, and other languages, mainly for experiments or fun
+    little projects.
   </p>
 
   <p>
     Approximate stack I use for SPAs these days:
     <br />
     React + Redux / Context API, react-query / SWR, css-in-js, Vitest + RTL, Playwright, Vite,
-    Eslint + Prettier. I’d go for Nginx for a web server. I’m comfortable with GitHub Actions
-    and Docker for CI/CD automation.
+    Eslint + Prettier. I’d go for Nginx for a web server, and I’m comfortable with GitHub Actions
+    and Docker for CI/CD.
   </p>
 
   <h3>Soft skills</h3>
 
   <p>
-    Organised regular frontend knowledge-sharing sessions within the company. Interviewed
-    and onboarded numerous team members to the growing frontend departments. Public
-    speaking: internal demos and talks, external meetup talks. Mentored a few people of
-    different levels, almost all of them got promoted. Led a team of 7 engineers.
+    Organised regular frontend knowledge-sharing sessions. Interviewed and onboarded many
+    frontend team members. Presented internal and external talks. Mentored engineers, most
+    of whom were promoted. Led a team of 7.
   </p>
 
   <h3 id="xp">Latest work experience</h3>
@@ -108,11 +111,9 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
         </h4>
         <p><span class="subheader">B2B Payments SaaS. 2022 - now</span></p>
         <p>
-          Started from the ground up with the other 6 people in the company. Set up and
-          continue maintaining everything related to our UI — repositories, CI/CD,
-          infrastructure, linting, etc. Over 3.5 years, I’ve built or contributed to
-          almost every product and feature we have, so listing them all would take a
-          while. Apron raised $30m last year.
+          Built and maintained all UI infrastructure from day one: set up repos, CI/CD,
+          and infra. Contributed to nearly every product and feature, supporting Apron’s
+          $30m raise and continued growth.
         </p>
         <p>
           Challenges: Scalable component and system design to lay a solid foundation for
@@ -130,19 +131,21 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
         <span class="subheader"> B2B Payments SaaS. 2020 - 2022 </span>
       </p>
       <p>
-        Pleo’s main goal was growth, with sales-lead onboarding as the main limiting
-        factor. I was leading the Productised onboarding team (9 people). The project was
-        quite successful; Pleo grew fast and became a unicorn valued at $4.7B. Challenges:
-        first experience as a team lead. Product-wise — a logic-heavy branched onboarding
-        flow, depending on many factors like different market regulations and company
-        types.
+        Pleo focused on growth, with sales-lead onboarding as the main limiting factor. I
+        led the Productised onboarding team (7 people). The project was successful; Pleo
+        grew fast and became a unicorn valued at $4.7B.
+      </p>
+      <p>
+        Challenges: first experience as a team lead. Product-wise — a logic-heavy branched
+        onboarding flow, depending on many factors like different market regulations and
+        company types.
         <br />
         Tech stack: TS, React, Emotion, SWR
       </p>
       <li>
         <h4>
-          Senior Frontend developer – <a href="https://revolut.com" target="_blank"
-            >Revolut</a
+          Senior Frontend developer – <a href="https://revolut.com" target="_blank">
+            Revolut</a
           >
         </h4>
         <p>
@@ -151,19 +154,18 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
         <p>
           2017: All the things, from basic tech stack decisions to conducting interviews
           for the growing team. Developed revolut.com website, worked on Revolut Business
-          launch, built customer support chat widget.
+          launch, and built the customer support chat widget.
         </p>
         <p>
-          2018-2020: Developed a few features of Revolut Business. Launched Expense
-          Management, Business Perks, Business Connect (a marketplace of integrations with
-          other apps through Revolut API), and implemented support for the Open Banking
-          standard. Implemented user-facing features + backoffice support UI.
+          2018-2020: Built features for Revolut Business, including Expense Management,
+          Business Perks, Business Connect (a marketplace of integrations via Revolut
+          API), and Open Banking support. Delivered user and backoffice UIs.
         </p>
         <p>mid.2020-sept.2020: Worked on a Chrome extension for retail users.</p>
         <p>
-          Challenges: Explosive team and project growth. Frontend developers grew from 5
-          to 72 in 3 years, requiring process, communication, and architecture
-          adjustments. Also had to learn browser extensions to build one.
+          Challenges: Explosive team and project growth. The frontend team grew from 5 to
+          72 in 3 years, requiring adjustments to processes, communication, and
+          architecture. Also had to learn browser extensions to build and launch one.
         </p>
         <p>Tech stack: TS, React, Redux, Ramda, styled-components, webpack</p>
       </li>
@@ -175,11 +177,11 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
   <ul class="lined">
     <li>
       <p><b>2010-2015:</b> Russian State University For The Humanities</p>
-      <p>Intellectual systems – Master's degree</p>
+      <p><b>Intellectual systems – Master's degree</b></p>
     </li>
     <li>
       <p><b>2015-2018:</b> Russian State University For The Humanities</p>
-      <p>Computer science fundamentals – Postgraduate</p>
+      <p><b>Computer science fundamentals – Postgraduate</b></p>
     </li>
   </ul>
 </CVLayout>
@@ -203,7 +205,6 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
 
     @media (min-width: 768px) {
       display: flex;
-      align-items: center;
       justify-content: space-between;
       .main-links {
         align-items: end;
@@ -238,6 +239,9 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
     a {
       color: var(--color-text);
       text-decoration: none;
+    }
+    li {
+      break-inside: avoid;
     }
   }
 
