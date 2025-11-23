@@ -1,7 +1,7 @@
 ---
 import Footer from 'components/Footer.astro'
 import Head from 'components/Head.astro'
-// import NavHeader from 'components/NavHeader.astro'
+import NavHeader from 'components/NavHeader.astro'
 
 interface Props {
   title: string
@@ -15,7 +15,7 @@ const { title, description } = Astro.props
   <Head title={title} description={description} />
   <slot name="head" slot="head" />
   <body>
-    <!-- <NavHeader /> -->
+    <NavHeader />
     <main>
       <slot />
     </main>

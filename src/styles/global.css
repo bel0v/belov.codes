@@ -9,13 +9,10 @@ html {
       color 0.5s ease,
       background-color 0.5s ease;
   }
-  --font-main: 'Space Grotesk Variable';
-  --font-code: 'Source Code Pro Variable';
-  --font-header: 'Work Sans Variable';
 }
 
 body {
-  font-family: var(--font-main), serif;
+  font-family: 'Space Grotesk Variable';
   font-weight: 400;
   font-size: 18px;
   font-optical-sizing: auto;
@@ -28,7 +25,7 @@ body {
   }
 }
 code {
-  font-family: var(--font-code), Consolas, monospace;
+  font-family: 'Source Code Pro Variable';
   font-style: normal;
 }
 
@@ -36,7 +33,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-header), sans-serif;
+  font-family: 'Work Sans Variable';
   font-weight: 700;
 }
 h1 {

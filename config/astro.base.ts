@@ -3,6 +3,7 @@ import { remarkReadingTime } from './remark-reading-time'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import node from '@astrojs/node'
+import { FontaineTransform } from 'fontaine'
 
 const config: AstroUserConfig = {
   site: 'https://belov.codes',
@@ -19,6 +20,16 @@ const config: AstroUserConfig = {
     css: {
       transformer: 'lightningcss',
     },
+    plugins: [
+      FontaineTransform.vite({
+        resolvePath: (id) => new URL(`./public${id}`, import.meta.url),
+        fallbacks: {
+          'Space Grotesk Variable': ['Helvetica'],
+          'Source Code Pro Variable': ['Courier New'],
+          'Work Sans Variable': ['Arial'],
+        },
+      }),
+    ],
   },
   markdown: {
     remarkPlugins: [remarkReadingTime],
