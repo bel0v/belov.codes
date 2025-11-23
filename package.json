@@ -1,39 +1,16 @@
 {
-  "name": "website",
+  "name": "belov-codes-monorepo",
   "type": "module",
   "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "pnpm test && astro check && astro build",
-    "preview": "pnpm build && astro preview",
-    "astro": "astro",
-    "serve": "node ./dist/server/entry.mjs",
-    "test": "vitest run --config ./config/vitest.config.ts"
-  },
-  "dependencies": {
-    "@astrojs/mdx": "4.3.9",
-    "@astrojs/node": "9.5.0",
-    "@astrojs/sitemap": "3.6.0",
-    "@fontsource-variable/sono": "5.2.8",
-    "@fontsource-variable/source-code-pro": "5.2.7",
-    "@fontsource-variable/space-grotesk": "5.2.10",
-    "@fontsource-variable/work-sans": "5.2.8",
-    "@lucide/astro": "0.552.0",
-    "astro": "5.14.7",
-    "dayjs": "1.11.19",
-    "mdast-util-to-string": "4.0.0",
-    "reading-time": "1.5.0"
+    "dev": "pnpm --filter website dev",
+    "build": "pnpm --filter website build",
+    "preview": "pnpm --filter website preview",
+    "serve": "pnpm --filter website serve",
+    "test": "pnpm --filter website test"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.5",
-    "@astrojs/markdown-remark": "6.3.8",
-    "fontaine": "0.7.0",
-    "lightningcss": "1.30.2",
-    "prettier": "3.6.2",
-    "prettier-plugin-astro": "0.14.1",
-    "sharp": "0.34.5",
-    "typescript": "5.9.3",
-    "typescript-eslint": "8.46.2",
-    "vitest": "3.2.4"
+    "typescript": "5.9.3"
   }
 }

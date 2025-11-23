@@ -1,38 +1,11 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
+  "files": [],
+  "references": [
+    { "path": "./packages/website" },
+    { "path": "./packages/minesweeper" }
+  ],
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "config/*": ["./src/config/*"],
-      "components/*": ["./src/components/*"],
-      "layouts/*": ["./src/layouts/*"],
-      "assets/*": ["./src/assets/*"],
-      "styles/*": ["./src/styles/*"],
-      "scripts/*": ["./src/scripts/*"],
-      "constants/*": ["./src/constants/*"]
-    },
-    "strict": true,
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "allowJs": true,
-    "jsx": "react-jsx",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noErrorTruncation": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "jsxImportSource": "react"
+    "composite": true,
+    "strict": true
   }
 }
