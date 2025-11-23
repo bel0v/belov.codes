@@ -24,7 +24,7 @@ const config: AstroUserConfig = {
     remarkPlugins: [remarkReadingTime],
   },
   redirects: {
-    '/': '/blog',
+    '/': '/about',
   },
 }
 
