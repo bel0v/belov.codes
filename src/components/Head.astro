@@ -4,8 +4,7 @@ import '@fontsource-variable/source-code-pro'
 import '@fontsource-variable/sono'
 import '@fontsource-variable/space-grotesk'
 import 'styles/global.css'
-import workSansWoff2 from '@fontsource-variable/work-sans/files/work-sans-latin-wght-normal.woff2'
-import sonoWoff2 from '@fontsource-variable/sono/files/sono-latin-wght-normal.woff2'
+// import sonoWoff2 from '@fontsource-variable/sono/files/sono-latin-wght-normal.woff2'
 
 interface Props {
   title: string
@@ -26,18 +25,11 @@ const { title, description } = Astro.props
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <script src="scripts/theme-toggle"></script>
-  <link
-    rel="preload"
-    as="font"
-    type="font/woff2"
-    href={workSansWoff2}
-    crossorigin="anonymous"
-  />
-  <link
+  <!-- <link
     rel="preload"
     as="font"
     type="font/woff2"
     href={sonoWoff2}
     crossorigin="anonymous"
-  />
+  /> -->
 </head>

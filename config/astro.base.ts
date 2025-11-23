@@ -23,6 +23,11 @@ const config: AstroUserConfig = {
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+    },
+  },
   redirects: {
     '/': '/about',
   },
