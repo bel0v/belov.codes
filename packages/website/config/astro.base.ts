@@ -5,9 +5,12 @@ import sitemap from '@astrojs/sitemap'
 import node from '@astrojs/node'
 import { FontaineTransform } from 'fontaine'
 import { resolve } from 'node:path'
+import { loadEnv } from 'vite'
+
+const { PUBLIC_APP_URL } = loadEnv(import.meta.env.PUBLIC_APP_URL, process.cwd(), '')
 
 const config: AstroUserConfig = {
-  site: import.meta.env.PUBLIC_APP_URL,
+  site: PUBLIC_APP_URL,
   adapter: node({
     mode: 'standalone',
   }),
