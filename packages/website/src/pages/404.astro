@@ -11,7 +11,7 @@ import MainLayout from 'layouts/MainLayout.astro'
 </MainLayout>
 
 <script>
-  import { throttle } from 'scripts/throttle'
+  import { throttle } from 'utils/helpers'
   const icon = document.getElementById('illustration')
 
   const updateIcon = (pointer: { x: number; y: number }) => {

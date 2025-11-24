@@ -1,4 +1,4 @@
-import { throttle } from './throttle'
+import { throttle } from 'utils/helpers'
 
 function getPointerProximity(
   pointerCoords: { x: number; y: number },
