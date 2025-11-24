@@ -11,6 +11,8 @@ interface Props {
   description?: string
 }
 const { title, description } = Astro.props
+
+const isProd = import.meta.env.PROD
 ---
 
 <head>
@@ -25,6 +27,15 @@ const { title, description } = Astro.props
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <script src="scripts/theme-toggle"></script>
+  {
+    isProd && (
+      <script
+        defer
+        src="/events.js"
+        data-website-id="0a3f6ca5-29f5-43fe-96db-f7b921f39b68"
+      />
+    )
+  }
   <!-- <link
     rel="preload"
     as="font"
