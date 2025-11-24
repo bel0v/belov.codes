@@ -4,9 +4,10 @@ import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import node from '@astrojs/node'
 import { FontaineTransform } from 'fontaine'
+import { resolve } from 'node:path'
 
 const config: AstroUserConfig = {
-  site: 'https://belov.codes',
+  site: import.meta.env.PUBLIC_APP_URL,
   adapter: node({
     mode: 'standalone',
   }),
@@ -19,6 +20,14 @@ const config: AstroUserConfig = {
   vite: {
     css: {
       transformer: 'lightningcss',
+    },
+    resolve: {
+      alias: {
+        utils: resolve(import.meta.dirname, '../../utils'),
+      },
+    },
+    optimizeDeps: {
+      include: ['utils'],
     },
     plugins: [
       FontaineTransform.vite({

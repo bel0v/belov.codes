@@ -1,0 +1,14 @@
+{
+  "name": "utils",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "sideEffects": false,
+  "exports": {
+    "./constants": "./constants/index.ts",
+    "./helpers": "./helpers/index.ts"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

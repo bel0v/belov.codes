@@ -13,8 +13,7 @@
       "styles/*": ["./src/styles/*"],
       "scripts/*": ["./src/scripts/*"],
       "constants/*": ["./src/constants/*"],
-      "minesweeper": ["../minesweeper/src/index.ts"],
-      "minesweeper/*": ["../minesweeper/src/*"]
+      "utils/*": ["../utils/*"]
     },
     "strict": true,
     "target": "ESNext",
@@ -38,8 +37,5 @@
     "allowUnusedLabels": false,
     "jsxImportSource": "react"
   },
-  "references": [
-    { "path": "../minesweeper" }
-  ]
+  "references": [{ "path": "../utils" }]
 }
-
