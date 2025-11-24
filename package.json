@@ -7,7 +7,7 @@
     "dev": "pnpm --filter website dev",
     "build": "pnpm --filter website build",
     "preview": "pnpm --filter website preview",
-    "serve": "pnpm --filter website serve",
+    "serve": "HOST=0.0.0.0 pnpm --filter website serve",
     "test": "pnpm --filter website test"
   },
   "workspaces": [
