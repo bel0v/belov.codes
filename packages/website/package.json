@@ -22,7 +22,6 @@
     "astro": "5.14.7",
     "dayjs": "1.11.19",
     "mdast-util-to-string": "4.0.0",
-    "minesweeper": "workspace:*",
     "reading-time": "1.5.0"
   },
   "devDependencies": {
@@ -30,12 +29,7 @@
     "@astrojs/markdown-remark": "6.3.8",
     "fontaine": "0.7.0",
     "lightningcss": "1.30.2",
-    "prettier": "3.6.2",
-    "prettier-plugin-astro": "0.14.1",
     "sharp": "0.34.5",
-    "typescript": "5.9.3",
-    "typescript-eslint": "8.46.2",
-    "vitest": "3.2.4"
+    "typescript": "5.9.3"
   }
 }
-
