@@ -1,4 +1,4 @@
-export const SOCIALS_BLUESKY = 'https://bsky.app/profile/y390r.bsky.social'
+export const SOCIALS_BLUESKY = 'https://bsky.app/profile/belov.codes'
 export const SOCIALS_LINKEDIN = 'https://www.linkedin.com/in/yegor-belov-668911a2/'
 export const SOCIALS_LINKEDIN_PRINT = 'linkedin.com/in/yegor-belov-668911a2'
 export const SOCIALS_CHESS = 'https://link.chess.com/friend/6HQ5Ez'
