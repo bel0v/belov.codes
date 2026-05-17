@@ -26,12 +26,12 @@
     "reading-time": "1.5.0"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.5",
+    "@astrojs/check": "0.9.9",
     "@astrojs/markdown-remark": "6.3.8",
     "fontaine": "0.7.0",
     "lightningcss": "1.30.2",
     "sharp": "0.34.5",
-    "typescript": "5.9.3",
+    "typescript": "6.0.3",
     "vite": " 6.4.1"
   }
 }
