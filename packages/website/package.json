@@ -11,15 +11,15 @@
     "test": "vitest run --config ./config/vitest.config.ts"
   },
   "dependencies": {
-    "@astrojs/mdx": "4.3.9",
-    "@astrojs/node": "9.5.0",
-    "@astrojs/sitemap": "3.6.0",
+    "@astrojs/mdx": "5.0.6",
+    "@astrojs/node": "10.1.1",
+    "@astrojs/sitemap": "3.7.2",
     "@fontsource-variable/sono": "5.2.8",
     "@fontsource-variable/source-code-pro": "5.2.7",
     "@fontsource-variable/space-grotesk": "5.2.10",
     "@fontsource-variable/work-sans": "5.2.8",
     "@lucide/astro": "0.552.0",
-    "astro": "5.14.7",
+    "astro": "6.3.3",
     "dayjs": "1.11.19",
     "hono": "4.10.6",
     "mdast-util-to-string": "4.0.0",
@@ -27,11 +27,12 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.9",
-    "@astrojs/markdown-remark": "6.3.8",
-    "fontaine": "0.7.0",
+    "@astrojs/markdown-remark": "7.1.2",
+    "fontaine": "0.8.0",
     "lightningcss": "1.30.2",
     "sharp": "0.34.5",
     "typescript": "6.0.3",
-    "vite": " 6.4.1"
+    "vite": " 7.3.3",
+    "vitest": "4.1.6"
   }
 }
