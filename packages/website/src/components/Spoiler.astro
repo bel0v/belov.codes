@@ -1,0 +1,97 @@
+---
+
+---
+
+<span class="spoiler" role="button" tabindex="0" aria-expanded="false">
+  <span class="content"><slot /></span>
+</span>
+
+<style>
+  .spoiler {
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    display: inline;
+    box-decoration-break: clone;
+    border-radius: 4px;
+    -webkit-tap-highlight-color: transparent;
+
+    background-color: var(--spoiler-color, var(--color-text-secondary));
+    mask-image: url(/spoiler/noise-a.svg), url(/spoiler/noise-b.svg);
+    mask-size:
+      320px 320px,
+      200px 200px;
+    mask-repeat: repeat, repeat;
+    mask-composite: add;
+    will-change: mask-position;
+    animation: spoiler-drift 40s linear infinite;
+    transition:
+      background-color 0.3s,
+      mask-image 0.3s;
+  }
+
+  .spoiler:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  .spoiler[aria-expanded='true'] {
+    background-color: transparent;
+    mask-image: none;
+    animation: none;
+    cursor: text;
+  }
+  .spoiler[aria-expanded='true'] .content {
+    visibility: visible;
+    opacity: 1;
+    user-select: auto;
+  }
+
+  @keyframes spoiler-drift {
+    from {
+      mask-position:
+        0 0,
+        0 0;
+    }
+    to {
+      mask-position:
+        320px 160px,
+        -200px 200px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .spoiler {
+      animation: none;
+    }
+  }
+</style>
+
+<style>
+  .content {
+    visibility: hidden;
+    opacity: 0;
+    user-select: none;
+    transition:
+      visibility 0.3s,
+      opacity 0.3s;
+  }
+</style>
+
+<script>
+  for (const el of document.querySelectorAll<HTMLElement>('.spoiler[role="button"]')) {
+    const reveal = () => {
+      if (el.getAttribute('aria-expanded') === 'true') return
+      el.setAttribute('aria-expanded', 'true')
+      el.removeAttribute('role')
+      el.removeAttribute('tabindex')
+    }
+    el.addEventListener('click', reveal)
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault()
+        reveal()
+      }
+    })
+  }
+</script>

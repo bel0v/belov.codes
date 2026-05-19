@@ -1,0 +1,28 @@
+---
+import NowLayout from 'layouts/NowLayout.astro'
+import { getCollection, render, type CollectionEntry } from 'astro:content'
+
+export async function getStaticPaths() {
+  const entries = await getCollection('now')
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }))
+}
+
+interface Props {
+  entry: CollectionEntry<'now'>
+}
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+
+const formattedDate = entry.data.publishDate.toLocaleDateString(
+  entry.data.locale ?? 'en-GB',
+  { year: 'numeric', month: 'long', day: 'numeric' }
+)
+---
+
+<NowLayout pageTitle={`Now — ${formattedDate}`} publishDate={entry.data.publishDate}>
+  <Content />
+</NowLayout>

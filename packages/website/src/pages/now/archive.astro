@@ -1,0 +1,39 @@
+---
+import MainLayout from 'layouts/MainLayout.astro'
+import ContentWrapper from '../../components/ContentWrapper.astro'
+import { getCollection } from 'astro:content'
+
+const items = (await getCollection('now'))
+  .map((entry) => ({ slug: entry.id, publishDate: entry.data.publishDate }))
+  .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
+---
+
+<MainLayout title="Now — archive">
+  <ContentWrapper variant="article">
+    <h1>Now — archive</h1>
+    <ul>
+      {
+        items.map((item) => (
+          <li>
+            <a href={`/now/${item.slug}`}>
+              <time datetime={item.publishDate.toISOString()}>
+                {item.publishDate.toLocaleDateString('en-GB', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="back"><a href="/now">← back to now</a></p>
+  </ContentWrapper>
+</MainLayout>
+
+<style>
+  .back {
+    margin-block-start: 4rem;
+  }
+</style>

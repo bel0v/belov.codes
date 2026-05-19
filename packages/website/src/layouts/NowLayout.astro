@@ -1,0 +1,36 @@
+---
+import MainLayout from './MainLayout.astro'
+import ContentWrapper from '../components/ContentWrapper.astro'
+
+interface Props {
+  pageTitle: string
+  publishDate: Date | string
+  locale?: string
+}
+
+const { pageTitle, publishDate, locale = 'en-GB' } = Astro.props
+
+const publishDateObj = new Date(publishDate)
+const publishDateFormatted = publishDateObj.toLocaleDateString(locale, {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+})
+---
+
+<MainLayout title={pageTitle}>
+  <ContentWrapper variant="article">
+    <h1>Now</h1>
+    <p>
+      <time datetime={publishDateObj.toISOString()}>{publishDateFormatted}</time>
+    </p>
+    <slot />
+    <p class="back"><a href="/now/archive">← archive</a></p>
+  </ContentWrapper>
+</MainLayout>
+
+<style>
+  .back {
+    margin-block-start: 4rem;
+  }
+</style>

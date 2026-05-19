@@ -1,0 +1,15 @@
+---
+import NowLayout from 'layouts/NowLayout.astro'
+import { getCollection, render } from 'astro:content'
+
+const entries = await getCollection('now')
+const [latest] = entries.sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+)
+
+const { Content } = await render(latest)
+---
+
+<NowLayout pageTitle="Now" publishDate={latest.data.publishDate}>
+  <Content />
+</NowLayout>
