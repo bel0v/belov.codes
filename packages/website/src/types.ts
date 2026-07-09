@@ -5,3 +5,10 @@ export interface PostFrontmatter {
   locale?: string
   minutesRead: string
 }
+
+export type NowPlayingData = {
+  isPlaying: boolean
+  track: string
+  artist: string
+  albumArt: string | null
+}

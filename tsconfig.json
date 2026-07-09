@@ -3,7 +3,8 @@
   "references": [
     { "path": "./packages/website" },
     { "path": "./packages/api" },
-    { "path": "./packages/utils" }
+    { "path": "./packages/utils" },
+    { "path": "./packages/minesweeper" }
   ],
   "compilerOptions": {
     "composite": true,

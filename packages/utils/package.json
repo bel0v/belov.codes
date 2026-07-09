@@ -6,7 +6,8 @@
   "sideEffects": false,
   "exports": {
     "./constants": "./constants/index.ts",
-    "./helpers": "./helpers/index.ts"
+    "./helpers": "./helpers/index.ts",
+    "./errors": "./errors/index.ts"
   },
   "devDependencies": {
     "typescript": "6.0.3"

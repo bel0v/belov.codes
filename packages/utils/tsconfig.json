@@ -10,8 +10,7 @@
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
     "declarationMap": true,
-    "rootDir": "./",
-    "baseUrl": "."
+    "rootDir": "./"
   },
   "include": ["**/*"]
 }
