@@ -6,6 +6,7 @@ import MainLayout from 'layouts/MainLayout.astro'
 import { SOCIALS_CHESS, SOCIALS_BLUESKY, PUBLIC_PGP_FILE } from 'constants/links'
 import { getDanielsAge } from 'scripts/daniels-age'
 import ContentWrapper from '../../components/ContentWrapper.astro'
+import PersonJsonLd from 'components/PersonJsonLd.astro'
 
 const age = getDanielsAge()
 export const prerender = false
@@ -17,6 +18,7 @@ export const prerender = false
     name="description"
     content="About Yegor Belov — London-based Software Engineer"
   />
+  <PersonJsonLd slot="head" />
   <ContentWrapper variant="article">
     <div class="content">
       <h2>Hi!</h2>

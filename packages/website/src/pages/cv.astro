@@ -8,6 +8,7 @@ import {
 } from 'constants/links'
 import CVLayout from 'layouts/CVLayout.astro'
 import { Printer } from '@lucide/astro'
+import PersonJsonLd from 'components/PersonJsonLd.astro'
 export const prerender = false
 const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
 ---
@@ -18,6 +19,7 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
     name="description"
     content={`Yegor Belov is a front-end developer with ${workExperienceYears}+ years of experience. He builds robust, scalable products for fast-paced, high-growth companies.`}
   />
+  <PersonJsonLd slot="head" />
   <section class="top-section">
     <div>
       <div class="hstack">
@@ -152,9 +154,10 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
           <span class="subheader"> A Challenger bank. 2017 - 2020 </span>
         </p>
         <p>
-          2017: All the things, from basic tech stack decisions to conducting interviews
-          for the growing team. Developed revolut.com website, worked on Revolut Business
-          launch, and built the customer support chat widget.
+          2017: Hired as one of the first 3 frontend engineers. Worked on all the things,
+          from basic tech stack decisions to conducting interviews for the growing team.
+          Developed revolut.com website, worked on Revolut Business launch, and built the
+          customer support chat widget.
         </p>
         <p>
           2018-2020: Built features for Revolut Business, including Expense Management,

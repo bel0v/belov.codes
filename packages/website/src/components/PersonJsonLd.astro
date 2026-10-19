@@ -1,0 +1,31 @@
+---
+import { SOCIALS_BLUESKY, SOCIALS_GITHUB, SOCIALS_LINKEDIN } from 'constants/links'
+
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Yegor Belov',
+  url: Astro.site?.href,
+  email: ['mailto:yegor@belov.codes', 'mailto:belgeomax@gmail.com'],
+  jobTitle: 'Staff Software Engineer',
+  description:
+    'London-based senior front-end engineer and team lead specialising in fintech, product and UX.',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Apron Payments',
+    url: 'https://getapron.com',
+  },
+  homeLocation: {
+    '@type': 'Place',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'London',
+      addressCountry: 'GB',
+    },
+  },
+  knowsAbout: ['Front-end development', 'TypeScript', 'React', 'Fintech', 'UX'],
+  sameAs: [SOCIALS_LINKEDIN, SOCIALS_GITHUB, SOCIALS_BLUESKY],
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(person)} />
