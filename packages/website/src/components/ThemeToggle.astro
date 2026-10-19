@@ -53,6 +53,11 @@
     /* transition: color 0.15s ease; */
 
     color: var(--color);
+    width: var(--size);
+    height: var(--size);
+
+    /* all declarations must stay above the nested rules: lightningcss mangles the
+       output when declarations follow nested rules, which breaks the svg rules below */
     &:hover {
       color: var(--color-hover);
     }
@@ -60,9 +65,6 @@
     @media (hover: none) {
       --size: 48px;
     }
-
-    width: var(--size);
-    height: var(--size);
 
     svg {
       width: 100%;
