@@ -4,6 +4,7 @@ import '@fontsource-variable/source-code-pro'
 import '@fontsource-variable/sono'
 import '@fontsource-variable/space-grotesk'
 import 'styles/global.css'
+import { UMAMI_WEBSITE_ID } from 'constants/analytics'
 // import sonoWoff2 from '@fontsource-variable/sono/files/sono-latin-wght-normal.woff2'
 
 interface Props {
@@ -29,12 +30,7 @@ const isProd = import.meta.env.PROD
   <script src="scripts/theme-toggle"></script>
   {
     isProd && (
-      <script
-        is:inline
-        defer
-        src="/events.js"
-        data-website-id="0a3f6ca5-29f5-43fe-96db-f7b921f39b68"
-      />
+      <script is:inline defer src="/events.js" data-website-id={UMAMI_WEBSITE_ID} />
     )
   }
   <!-- <link

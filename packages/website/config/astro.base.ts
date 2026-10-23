@@ -11,6 +11,7 @@ const { PUBLIC_APP_URL } = loadEnv(import.meta.env.PUBLIC_APP_URL, process.cwd()
 
 const config: AstroUserConfig = {
   site: PUBLIC_APP_URL,
+  output: 'server',
   adapter: node({
     mode: 'standalone',
   }),
