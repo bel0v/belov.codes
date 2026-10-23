@@ -42,12 +42,15 @@ function trackAgentVisit(
   }).catch(() => {})
 }
 
-export const onRequest = defineMiddleware((context, next) => {
+export const onRequest = defineMiddleware(async (context, next) => {
   const { request, url } = context
+  const response = await next()
 
+  // Only count visits to pages that exist; vulnerability scanners probing random paths get 404s.
   if (
     import.meta.env.PROD &&
     request.method === 'GET' &&
+    response.status < 400 &&
     !IGNORED_PATHS.test(url.pathname)
   ) {
     const agent = detectAgent(request.headers)
@@ -60,5 +63,5 @@ export const onRequest = defineMiddleware((context, next) => {
     }
   }
 
-  return next()
+  return response
 })
