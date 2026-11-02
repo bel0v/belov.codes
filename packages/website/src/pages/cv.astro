@@ -29,7 +29,7 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
         <h2>Yegor Belov</h2>
       </div>
 
-      <h3>Software engineer · London, UK</h3>
+      <h3 class="role">Staff Software engineer · Frontend · Fintech · London, UK</h3>
     </div>
 
     <div class="main-links">
@@ -56,135 +56,168 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
     </div>
   </section>
 
-  <p style="margin-top:1rem;">
-    I’m a front-end developer with {workExperienceYears}+ years of experience, including {
+  <h3 class="section">Summary</h3>
+
+  <p class="lead">
+    I’m a lead frontend engineer with {workExperienceYears}+ years of experience — {
       workExperienceYears - 2
-    } in fintech. I build robust, scalable products for fast-paced, high-growth companies.
-    At Revolut, Pleo, and Apron, I shipped products that scale and last. I care about clean
-    code, great UX, and making complex things simple.
+    } of those in fintech. I care deeply about what compounds: clean architecture, delightful
+    UX, and a culture where people feel safe to speak up and empowered to contribute.
   </p>
-
-  <h3>Technical Skills</h3>
-
-  <p>
-    I specialise in the Frontend and Fintech domains, with a deep focus on product and UX.
+  <p class="lead">
     Start-up experience taught me how to build a scalable, maintainable platform from the
     ground up and what mistakes to avoid.
   </p>
-  <p>
-    <b>TypeScript</b> and <b>JavaScript</b> are my primary languages. Sometimes I write simple
-    code in Kotlin, Go, Python, Solidity, and other languages, mainly for experiments or fun
-    little projects.
-  </p>
 
+  <h3 class="section" id="xp">Latest experience</h3>
   <p>
-    Approximate stack I use for SPAs these days:
-    <br />
-    React + Redux / Context API, react-query / SWR, css-in-js, Vitest + RTL, Playwright, Vite,
-    Eslint + Prettier. I’d go for Nginx for a web server, and I’m comfortable with GitHub Actions
-    and Docker for CI/CD.
-  </p>
-
-  <h3>Soft skills</h3>
-
-  <p>
-    Organised regular frontend knowledge-sharing sessions. Interviewed and onboarded many
-    frontend team members. Presented internal and external talks. Mentored engineers, most
-    of whom were promoted. Led product teams of up to 7 engineers. Led and scaled Frontend
-    department from 1 to 10 engineers.
-  </p>
-
-  <h3 id="xp">Latest work experience</h3>
-  <p>
-    You can find the full list on my <a href={SOCIALS_LINKEDIN} target="_blank"
-      >LinkedIn page.</a
-    >
+    You can find the full list on my <a href={SOCIALS_LINKEDIN} target="_blank">
+      LinkedIn page.
+    </a>
   </p>
 
   <ul class="lined">
     <li>
       <div>
         <h4>
-          Founding Frontend engineer – <a href="https://getapron.com" target="_blank">
-            Apron Payments
-          </a>
+          <a href="https://getapron.com" target="_blank"> Apron Payments </a> - Founding Frontend
+          Engineer – London, UK
         </h4>
-        <p><span class="subheader">B2B Payments SaaS. 2022 - now</span></p>
+        <p><span class="subheader">B2B Payments SaaS. 2022 - present</span></p>
         <p>
-          Built and maintained all UI infrastructure from day one: set up repos, CI/CD,
-          and infra. Contributed to nearly every product and feature, supporting Apron’s
-          $30m raise and continued growth. Led the Frontend function which scaled to 10
-          engineers.
+          · Architected frontend platform from the ground up (monorepo structure, CI/CD,
+          deployment infra, error monitoring etc.), still underpinning the apps, back
+          office and website 9,000+ PRs later.
         </p>
         <p>
-          Challenges: Scalable component and system design to lay a solid foundation for
-          the product. In the later years, deep integration of LLMs and AI agents into the
-          work process.
-          <br />
-          Tech stack: TS, React, react-query, stitches, playwright, vite
+          · Shipped features across every product surface: payments, approval workflows,
+          roles & permissions, bookkeeping, cards, expenses, back office and website.
+        </p>
+        <p>
+          · Led 10-person frontend group through leadership transition without
+          line-managing it. Established unified backlog, shared operational metrics, and
+          bi-weekly forum. Scaled 11 initiatives to run under 6 leads within 3 weeks.
+          Hired and mentored engineers from mid-level to IC6; co-authored engineering
+          levels framework and AI engineering standards.
+        </p>
+        <p class="tech">
+          <span class="tech-label">Tech stack:</span>
+          <code>TS</code>
+          <code>React</code>
+          <code>react-query</code>
+          <code>vanilla-extract</code>
+          <code>vite</code>
+          <code>Playwright</code>
+          <code>Storybook</code>
+          <code>Sentry</code>
+          <code>OpenReplay</code>
+          <code>GitHub Actions</code>
+          <code>Firebase/GCP</code>
         </p>
       </div>
     </li>
 
     <li>
-      <h4>Engineering Lead – <a href="https://pleo.io" target="_blank">Pleo</a></h4>
+      <h4>
+        <a href="https://pleo.io" target="_blank">Pleo</a> – Engineering Lead – remote (Europe)
+      </h4>
 
       <p>
         <span class="subheader"> B2B Payments SaaS. 2020 - 2022 </span>
       </p>
       <p>
-        Pleo focused on growth, with sales-lead onboarding as the main limiting factor. I
-        led the Productised onboarding team (7 people). The project was successful; Pleo
-        grew fast and became a unicorn valued at $4.7B.
+        Led 7-person Productised Onboarding team to unblock sales-led growth. Shipped
+        logic-heavy branched flows handling multi-market regulations and entity types.
+        Pleo hit unicorn valuation ($4.7B) during that time.
+      </p>
+      <p class="tech">
+        <span class="tech-label">Tech stack:</span>
+        <code>TS</code>
+        <code>React</code>
+        <code>Emotion</code>
+        <code>SWR</code>
+      </p>
+    </li>
+
+    <li>
+      <h4>
+        <a href="https://revolut.com" target="_blank">Revolut</a> – Senior Frontend developer
+        – Moscow, Russia
+      </h4>
+      <p>
+        <span class="subheader"> A Challenger bank. 2017 - 2020 </span>
       </p>
       <p>
-        Challenges: first experience as a team lead. Product-wise — a logic-heavy branched
-        onboarding flow, depending on many factors like different market regulations and
-        company types.
-        <br />
-        Tech stack: TS, React, Emotion, SWR
+        As one of the first 4 frontend engineers, shaped early tech stack decisions and
+        hiring as the team scaled. Built revolut.com, shipped Revolut Business launch
+        features, and delivered in-app customer support chat widget. Built Expense
+        Management, Business Perks, Business Connect (API integrations marketplace), and
+        Open Banking support. Delivered both customer-facing and back-office UIs.
       </p>
-      <li>
-        <h4>
-          Senior Frontend developer – <a href="https://revolut.com" target="_blank">
-            Revolut</a
-          >
-        </h4>
-        <p>
-          <span class="subheader"> A Challenger bank. 2017 - 2020 </span>
-        </p>
-        <p>
-          2017: Hired as one of the first 3 frontend engineers. Worked on all the things,
-          from basic tech stack decisions to conducting interviews for the growing team.
-          Developed revolut.com website, worked on Revolut Business launch, and built the
-          customer support chat widget.
-        </p>
-        <p>
-          2018-2020: Built features for Revolut Business, including Expense Management,
-          Business Perks, Business Connect (a marketplace of integrations via Revolut
-          API), and Open Banking support. Delivered user and backoffice UIs.
-        </p>
-        <p>mid.2020-sept.2020: Worked on a Chrome extension for retail users.</p>
-        <p>
-          Challenges: Explosive team and project growth. The frontend team grew from 5 to
-          72 in 3 years, requiring adjustments to processes, communication, and
-          architecture. Also had to learn browser extensions to build and launch one.
-        </p>
-        <p>Tech stack: TS, React, Redux, Ramda, styled-components, webpack</p>
-      </li>
+      <p>
+        Scaled frontend architecture and code review processes as the team grew from 4 to
+        72 engineers over 3 years.
+      </p>
+      <p class="tech">
+        <span class="tech-label">Tech stack:</span>
+        <code>TS</code>
+        <code>React</code>
+        <code>Redux</code>
+        <code>Ramda</code>
+        <code>styled-components</code>
+        <code>webpack</code>
+      </p>
     </li>
   </ul>
 
-  <h3>Education</h3>
+  <h3 class="section">Stack</h3>
+
+  <p class="tech skill">
+    <b class="tech-label">Core Languages &amp; Frameworks:</b>
+    <code>TypeScript</code>
+    <code>JavaScript</code>
+    <code>React</code>
+    <code>Redux</code>
+    <code>Context API</code>
+    <code>React Query</code>
+    <code>SWR</code>
+    <code>CSS-in-JS</code>
+    <code>Emotion</code>
+    <code>vanilla-extract</code>
+    <code>styled-components</code>
+    <code>HTML5</code>
+    <code>CSS3</code>
+  </p>
+  <p class="tech skill">
+    <b class="tech-label">Frontend Tooling &amp; Testing:</b>
+    <code>Vite</code>
+    <code>Webpack</code>
+    <code>Playwright</code>
+    <code>Vitest</code>
+    <code>React Testing Library</code>
+    <code>Storybook</code>
+    <code>ESLint</code>
+    <code>Prettier</code>
+  </p>
+  <p class="tech skill">
+    <b class="tech-label">CI/CD &amp; Infrastructure:</b>
+    <code>GitHub Actions</code>
+    <code>Docker</code>
+    <code>Nginx</code>
+    <code>Firebase</code>
+    <code>GCP</code>
+  </p>
+
+  <h3 class="section">Education</h3>
 
   <ul class="lined">
     <li>
-      <p><b>2010-2015:</b> Russian State University For The Humanities</p>
-      <p><b>Intellectual systems – Master's degree</b></p>
+      <p><b>2015-2018:</b> Russian State University For The Humanities</p>
+      <p><b>Postgraduate Studies, Computer Science </b></p>
     </li>
     <li>
-      <p><b>2015-2018:</b> Russian State University For The Humanities</p>
-      <p><b>Computer science fundamentals – Postgraduate</b></p>
+      <p><b>2010-2015:</b> Russian State University For The Humanities</p>
+      <p><b>Master's degree, Intelligent Systems </b></p>
     </li>
   </ul>
 </CVLayout>
@@ -219,11 +252,68 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
     }
   }
 
-  h3 {
-    margin-block-start: 2rem;
+  .role {
+    margin-block: 0.5rem 0;
+    font-size: 120%;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+  }
+  .section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-block: 2.5rem 1rem;
+    font-size: 85%;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-emphasis);
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: color-mix(in srgb, var(--color-text) 15%, transparent);
+    }
+    @media print {
+      margin-block-start: 1.5rem;
+    }
+  }
+  .lead {
+    font-size: 120%;
   }
   .subheader {
     color: var(--color-text-secondary);
+    font-size: 90%;
+    letter-spacing: 0.02em;
+  }
+  .tech {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+    .tech-label {
+      margin-right: 0.25rem;
+      color: var(--color-text-secondary);
+      font-size: 85%;
+    }
+    &.skill {
+      margin-block: 0 1rem;
+      .tech-label {
+        margin-right: 0.5rem;
+        color: var(--color-text);
+        font-size: 100%;
+        font-weight: 700;
+      }
+    }
+    code {
+      padding: 0.15em 0.45em;
+      border-radius: 6px;
+      background: color-mix(in srgb, var(--color-text) 10%, transparent);
+      font-size: 80%;
+      line-height: 1.5;
+      white-space: nowrap;
+    }
   }
 
   .main-links {
@@ -267,9 +357,15 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
       margin: 0;
       padding-bottom: 2rem;
       padding-left: 2rem;
-      h3,
+      h4 {
+        margin: 0 0 0.25rem;
+        font-size: 115%;
+      }
       p {
-        margin: 0;
+        margin: 0 0 0.6rem;
+      }
+      .subheader {
+        margin-bottom: 0.75rem;
       }
       &:before {
         background-color: var(--color-emphasis);
@@ -287,16 +383,69 @@ const workExperienceYears = dayjs(new Date()).diff('2015-03-01', 'year')
         background-repeat: no-repeat;
         background-size: contain;
         left: calc(0.5rem - 5px);
-        top: 0.75rem;
+        top: 0.5rem;
         width: 12px;
         height: 12px;
         border-radius: 50%;
+        box-shadow: 0 0 0 4px var(--color-background);
       }
       &:first-child:before {
-        top: 0.75rem;
+        top: 0.5rem;
       }
       &:last-child:before {
         height: 1rem;
+      }
+    }
+  }
+
+  @media print {
+    :global(html) {
+      color-scheme: light;
+      --color-background: #fff;
+      --color-text: #000;
+      --color-text-secondary: #333;
+      background: #fff;
+    }
+    .top-section {
+      border-bottom-color: var(--color-text);
+    }
+    .role,
+    .subheader,
+    .tech .tech-label {
+      color: var(--color-text);
+    }
+    .section {
+      margin-block: 1.25rem 0.5rem;
+      color: var(--color-text);
+      &::after {
+        background: var(--color-text);
+      }
+    }
+    .lead {
+      font-size: inherit;
+    }
+    .tech {
+      margin-block: 0.25rem 0.5rem;
+      gap: 0;
+      code {
+        padding: 0;
+        background: none;
+        font-size: 90%;
+        &:not(:last-of-type)::after {
+          content: ', ';
+          white-space: pre;
+        }
+      }
+      &.skill {
+        margin-block: 0 0.25rem;
+      }
+    }
+    ul.lined li {
+      padding-left: 0;
+      padding-bottom: 1rem;
+      &:before,
+      &:after {
+        display: none;
       }
     }
   }
